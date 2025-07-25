@@ -3,6 +3,6 @@
 
 export default function DarkModeToggle() {
   return(
-    <div>darkmode toggler</div>
+    <button>darkmode toggler</button>
   )
 }
