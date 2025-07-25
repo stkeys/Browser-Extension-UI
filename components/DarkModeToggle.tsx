@@ -2,7 +2,8 @@
 
 
 export default function DarkModeToggle() {
+  const darkMode = true;
   return(
-    <button>darkmode toggler</button>
+    <button>{darkMode ? 'light' : 'dark'}</button>
   )
 }
