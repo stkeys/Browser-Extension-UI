@@ -1,9 +1,19 @@
 'use client';
 
+import { useState } from "react";
+
 
 export default function DarkModeToggle() {
-  const darkMode = true;
+  const [mode, setMode] = useState('☀️ light')
+  function darkMode() {
+    if( mode === '☀️ light') {
+      setMode('☪ dark');
+    } else{
+      setMode('☀️ light')
+      
+    }
+  }
   return(
-    <button>{darkMode ? 'light' : 'dark'}</button>
+    <button onClick={darkMode}>{mode}</button>
   )
 }
