@@ -6,8 +6,11 @@ type ThemeProviderProps = {
 }
 
 const ThemeProvider = ({children}: ThemeProviderProps) => {
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem('theme') === 'dark' 
+  );
   return (
-    <ThemeContext.Provider value=''>
+    <ThemeContext.Provider value={darkMode, setDarkMode}>
       {children}
     </ThemeContext.Provider>
   );
