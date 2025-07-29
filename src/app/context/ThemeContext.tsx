@@ -16,6 +16,19 @@ type ThemeProviderProps = {
 
 const ThemeProvider = ({children}: ThemeProviderProps) => {
   const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+      setDarkMode(storedTheme === 'dark');
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+    document.documentElement.classList.toggle('dark', darkMode);
+  }, [darkMode]);
+  
   return (
     <ThemeContext.Provider value={{darkMode, setDarkMode}}>
       {children}
