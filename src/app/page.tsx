@@ -1,4 +1,4 @@
-
+'use client';
 import DarkModeToggle from "../../components/DarkModeToggle";
 import { ThemeProvider } from "./context/ThemeContext";
 
