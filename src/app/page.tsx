@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import DarkModeToggle from "../../components/DarkModeToggle";
 import { ThemeProvider } from "./context/ThemeContext";
 
