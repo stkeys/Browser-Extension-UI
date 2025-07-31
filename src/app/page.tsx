@@ -18,14 +18,28 @@ export default function Home() {
                 height={150}
               />
             </div>
-            <button className="bg-[hsl(226,11%,37%)] p-2 rounded-xl transition-colors mt-2 flex items-center">
+            <button className=" dark:bg-gradient-to-b dark:bg-[hsl(226,11%,37%)] bg-[hsl(0,0%,93%)] p-2 rounded-xl transition-colors mt-2 flex items-center">
               <DarkModeToggle/>
             </button>
             
           </div>
          
-         <div>
-            <p>Extension Lists</p>
+         <div className="flex justify-between ">
+            <p className="text-[2rem] mb-4">Extensions List</p>
+            <div className="space-x-2">
+              <button 
+                className="p-[12px] .btn-bg rounded-2xl transition-colors mb-4">
+                <a href="#" >All</a>
+              </button>
+              <button 
+                className="p-[12px] .btn-bg rounded-2xl transition-colors mb-4">
+                <a href="#" >Active</a>
+              </button>
+              <button 
+                className="p-[12px] .btn-bg rounded-2xl transition-colors mb-4">
+                <a href="#" >Inactive</a>
+              </button>
+            </div>
           </div>
         </div>
       </ThemeProvider>
