@@ -1,4 +1,5 @@
 'use client';
+import {Sun, Moon} from 'react-feather';
 
 
 import { useDarkMode } from "@/app/context/ThemeContext";
@@ -10,7 +11,7 @@ export default function DarkModeToggle() {
   
   return(
     <button onClick={() => setDarkMode(!darkMode)}>
-      {darkMode ? "☀️" : "🌙"}
+      {darkMode ? <Sun /> : <Moon />}
  
     </button>
   )
