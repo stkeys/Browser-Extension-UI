@@ -18,7 +18,7 @@ export default function Home() {
                 height={150}
               />
             </div>
-            <button className="bg-[hsl(226,11%,37%)] p-2 rounded-lg transition-colors mt-2 flex items-center">
+            <button className="bg-[hsl(226,11%,37%)] p-2 rounded-xl transition-colors mt-2 flex items-center">
               <DarkModeToggle/>
             </button>     
             
