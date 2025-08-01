@@ -28,15 +28,15 @@ export default function Home() {
             <p className="text-[2rem] mb-4 font-bold text-[hsl(227,75%,14%)] dark:text-white">Extensions List</p>
             <div className="space-x-2">
               <button 
-                className="p-[12px] .btn-bg rounded-2xl transition-colors mb-4">
+                className="p-[12px] btn-bg rounded-2xl transition-colors mb-4">
                 <a href="#" >All</a>
               </button>
               <button 
-                className="p-[12px] .btn-bg rounded-2xl transition-colors mb-4">
+                className="p-[12px] btn-bg rounded-2xl transition-colors mb-4">
                 <a href="#" >Active</a>
               </button>
               <button 
-                className="p-[12px] .btn-bg rounded-2xl transition-colors mb-4">
+                className="p-[12px] btn-bg rounded-2xl transition-colors mb-4">
                 <a href="#" >Inactive</a>
               </button>
             </div>
