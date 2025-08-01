@@ -1,6 +1,9 @@
 'use client';
 
+import { useState } from "react";
+
 export default function Buttons() {
+  const [activeButton, setActiveButton] = useState<number | null>(null);
   const buttons = [
     { label: 'All', path: '/'},
     { label: 'Active', path: '/'},
@@ -11,7 +14,9 @@ export default function Buttons() {
       {buttons.map((btn, index) => (
         <button
           key={index}
-          className="p-[12px] btn-bg rounded-2xl transition-colors mb-4">
+          onClick={() => setActiveButton(index)}
+          className={`p-[12px] btn-bg rounded-2xl transition-colors mb-4
+          ${activeButton === index ? 'bg-[hsl(hsl(3,77%,44%)] text-white' : 'bg-[hsl(hsl(3,77%,44%))] dark:bg-[hsl(226,11%,37%)] text-black dark:text-white'}`}>
           {btn.label}
         </button>
       ))}
