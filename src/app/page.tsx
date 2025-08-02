@@ -4,7 +4,6 @@ import DarkModeToggle from "../../components/DarkModeToggle";
 import { ThemeProvider } from "./context/ThemeContext";
 import  Logo  from "../../public/images/logo.svg"
 import Buttons from "../../components/Button";
-import FlexSwitcher from "../../components/Flex-Switcher";
 
 export default function Home() {
   return (
@@ -30,9 +29,7 @@ export default function Home() {
             <p className="text-[2rem] mb-4 font-bold text-[hsl(227,75%,14%)] dark:text-white">Extensions List</p>
             <Buttons />
           </div>
-          <FlexSwitcher>
-           
-          </FlexSwitcher>
+     
         </div>
       </ThemeProvider>
     </>
