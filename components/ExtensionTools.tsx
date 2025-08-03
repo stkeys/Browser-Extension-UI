@@ -1,11 +1,14 @@
 'use client';
 import Image from 'next/image';
 import {Data} from './Data';
+import FlexSwitcher from './Flex-Switcher';
 
  
 export default function ExtensionTools() { 
   return(
-    <div className='bg-red-50 p-4 rounded-lg shadow-md'>
+    <div className='bg-white p-4 rounded-lg shadow-md '>
+    <FlexSwitcher gap='3rem' threshold="65rem" className="items-center">
+
         {Data.map((item, index) => (
           <div
            key={index}
@@ -14,8 +17,9 @@ export default function ExtensionTools() {
             <Image
               src={item.image}
               alt="Extension icon"
-              width={100}
-              height={100}    
+              width={50}
+              height={50}    
+              className="w-12 h-12 "
             />
             <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
             <p className="text-gray-600">{item.description}</p>
@@ -23,6 +27,8 @@ export default function ExtensionTools() {
            
           </div>
         ))}
+    </FlexSwitcher>
+
     </div>
       
   )

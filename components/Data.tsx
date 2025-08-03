@@ -1,12 +1,25 @@
 export const Data = [
   {
-    image: "../../public/images/logo-devlens.svg",
-    title: 
-    ["Quickly inspect page layouts and",
-     "visualize element boundaries",
-    ],
-    description: "lorem20 ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    image: "/images/logo-devlens.svg",
+    title: "DevLens",
+    description: "Quickly inspect page layouts and visualize element boundaries",
     switch: false,
-  }
+  },
+
+  {
+    image: "/images/logo-style-spy.svg",
+    title: "StyleSpy",
+    description: "Quickly inspect page layouts and visualize element boundaries",
+    switch: false,
+  },
+
+  {
+    image: "/images/logo-speed-boost.svg",
+    title: "DevLens",
+    description: "Optimizes ",
+    switch: false,
+  },
+
+
 ]
   
