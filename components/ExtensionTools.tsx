@@ -1,13 +1,11 @@
 'use client';
 import Image from 'next/image';
 import {Data} from './Data';
-import FlexSwitcher from './Flex-Switcher';
 
  
 export default function ExtensionTools() { 
   return(
     <div className='bg-white p-4 rounded-lg shadow-md '>
-    <FlexSwitcher gap='3rem' threshold="65rem" className="items-center">
 
         {Data.map((item, index) => (
           <div
@@ -27,7 +25,6 @@ export default function ExtensionTools() {
            
           </div>
         ))}
-    </FlexSwitcher>
 
     </div>
       
