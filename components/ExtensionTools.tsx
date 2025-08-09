@@ -1,16 +1,16 @@
 'use client';
 import Image from 'next/image';
 import {Data} from './Data';
-
+import AutoGrid from './AutoGrid';
  
 export default function ExtensionTools() { 
   return(
     <div className='bg-white p-4 rounded-lg shadow-md '>
-
+      <AutoGrid  >
         {Data.map((item, index) => (
           <div
            key={index}
-           className="">
+           className="bg-gray-100 p-4 rounded-lg">
           
             <Image
               src={item.image}
@@ -25,7 +25,7 @@ export default function ExtensionTools() {
            
           </div>
         ))}
-
+      </AutoGrid>
     </div>
       
   )
