@@ -5,12 +5,12 @@ import AutoGrid from './AutoGrid';
  
 export default function ExtensionTools() { 
   return(
-    <div className='bg-white p-4 rounded-lg shadow-md '>
+    <div className=''>
       <AutoGrid  >
         {Data.map((item, index) => (
           <div
            key={index}
-           className="bg-gray-100 p-4 rounded-lg">
+           className="bg-white p-4 rounded-lg shadow-md ">
           
             <Image
               src={item.image}
