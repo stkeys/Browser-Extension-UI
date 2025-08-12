@@ -11,7 +11,7 @@ interface AutoGridProps extends ComponentProps<ElementType> {
 }
 
 const AutoGrid = ({
-  threshold = '16rem',
+  threshold = '20rem',
   gap = '1rem',
   as,
   children,
