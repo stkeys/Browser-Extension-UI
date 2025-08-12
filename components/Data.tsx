@@ -15,8 +15,8 @@ export const Data = [
 
   {
     image: "/images/logo-speed-boost.svg",
-    title: "DevLens",
-    description: "Optimizes ",
+    title: "JSONWizard",
+    description: "Formats, validates, and prettifies JSON responses in-browser",
     switch: false,
   },
 
