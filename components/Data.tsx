@@ -20,6 +20,13 @@ export const Data = [
     switch: false,
   },
 
+  {
+    image: "/images/logo-tab-master-pro.svg",
+    title: "TabMaster Pro",
+    description: "Organizes browser tabs into groups and sessions",
+    switch: false,
+  },
+
 
 ]
   

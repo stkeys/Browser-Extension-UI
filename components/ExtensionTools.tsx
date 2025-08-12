@@ -5,7 +5,7 @@ import AutoGrid from './AutoGrid';
  
 export default function ExtensionTools() { 
   return(
-    <div className=''>
+    <div >
       <AutoGrid  >
         {Data.map((item, index) => (
           <div
