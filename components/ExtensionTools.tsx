@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import {Data} from './Data';
 import AutoGrid from './AutoGrid';
+import ExtensionSwitch from './Switch';
  
 export default function ExtensionTools() { 
   return(
@@ -24,10 +25,12 @@ export default function ExtensionTools() {
             <p className="text-gray-600">{item.description}</p>
             </div>
             </div>
-
-            <button className="mt-6 p-2 bg-transparent text-black rounded-full border border-gray-300 ">
+            <div className='flex justify-between mt-6 items-center'>
+            <button className=" p-2 bg-transparent text-black rounded-full border border-gray-300 ">
               remove 
             </button>
+            <ExtensionSwitch />
+            </div>
           </div>
         ))}
       </AutoGrid>
