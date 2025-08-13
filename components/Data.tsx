@@ -34,6 +34,14 @@ export const Data = [
     switch: false,
   },
 
+  {
+    image: "/images/logo-viewport-buddy.svg",
+    title: "ViewportBuddy",
+    description: "Simulates various screen  resolutions directly through the browser",
+    switch: false,
+  },
+
+
 
 ]
   
