@@ -27,6 +27,13 @@ export const Data = [
     switch: false,
   },
 
+  {
+    image: "/images/logo-speed-boost.svg",
+    title: "SpeedBoost",
+    description: "Optimizes browser resource usage to accelerate page loading",
+    switch: false,
+  },
+
 
 ]
   
