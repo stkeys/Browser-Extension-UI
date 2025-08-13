@@ -25,7 +25,7 @@ export default function ExtensionTools() {
             </div>
             </div>
 
-            <button className="mt-4 px-2 py-2 bg-transparent text-black rounded-full border border-gray-300 ">
+            <button className="mt-6 p-2 bg-transparent text-black rounded-full border border-gray-300 ">
               remove 
             </button>
           </div>
