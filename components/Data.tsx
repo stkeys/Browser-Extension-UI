@@ -41,6 +41,19 @@ export const Data = [
     switch: false,
   },
 
+  {
+    image: "/images/logo-markup-notes.svg",
+    title: "Markup Notes",
+    description: "Easily annotate and highlight web pages with notes",
+    switch: false,
+  },
+  
+  {
+    image: "/images/logo-grid-guides.svg",
+    title: "GridGuides",
+    description: "Overlay customizable grid layouts on web pages",
+    switch: false,
+  },
 
 
 ]

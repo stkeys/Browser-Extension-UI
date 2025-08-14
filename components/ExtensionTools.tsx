@@ -11,8 +11,8 @@ export default function ExtensionTools() {
         {Data.map((item, index) => (
           <div
            key={index}
-           className="bg-white p-4 rounded-lg shadow-md ">
-           <div className="flex  gap-6">
+           className="bg-white p-6 rounded-lg shadow-md">
+           <div className="flex gap-6">
             <Image
               src={item.image}
               alt="Extension icon"
