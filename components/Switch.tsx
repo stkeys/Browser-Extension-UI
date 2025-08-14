@@ -5,7 +5,7 @@ const ExtensionSwitch = () => (
 	<form>
 		<div className="flex items-center">
 			<Switch.Root
-				className="relative h-[25px] w-[42px] cursor-default rounded-full bg-blackA6 shadow-[0_2px_10px] shadow-blackA4 outline-none focus:shadow-[0_0_0_2px] focus:shadow-black data-[state=checked]:bg-black"
+				className="relative h-[25px] w-[42px] cursor-default rounded-full bg-blackA6 shadow-[0_2px_10px] shadow-blackA4 outline-none focus:shadow-[0_0_0_2px] focus:shadow-black data-[state=checked]:bg-[hsl(3,77%,44%)]"
 				id="airplane-mode"
 				style={{ WebkitTapHighlightColor : "rgba(0, 0, 0, 0)"} as React.CSSProperties}
 			>
