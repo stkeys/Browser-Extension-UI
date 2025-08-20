@@ -5,9 +5,9 @@ import { useState } from "react";
 export default function Buttons() {
   const [activeButton, setActiveButton] = useState<number | null>(null);
   const buttons = [
-    { label: 'All', path: '/'},
-    { label: 'Active', path: '/'},
-    { label: 'Inactive', path: '/'},
+    { label: 'All' },
+    { label: 'Active' },
+    { label: 'Inactive'},
     ]
   return (
     <div className="space-x-2">
