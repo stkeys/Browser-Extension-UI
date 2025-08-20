@@ -29,7 +29,9 @@ export default function ExtensionTools() {
             <button className=" p-2 bg-transparent text-black rounded-full border border-gray-300 ">
               remove 
             </button>
-            <ExtensionSwitch />
+            <ExtensionSwitch 
+            checked={extension.isActive}
+            onCheckedChange={() => onToggle(extension.id)}/>
             </div>
           </div>
         ))}
