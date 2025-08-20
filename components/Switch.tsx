@@ -1,7 +1,12 @@
 import * as React from "react";
 import * as Switch from '@radix-ui/react-switch';
 
-const ExtensionSwitch = ({checked, onCheckedChange}) => (
+type ExtensionSwitchProps = {
+	checked: boolean;
+	onCheckedChange: (checked: boolean) => void;
+};
+
+const ExtensionSwitch = ({checked, onCheckedChange}: ExtensionSwitchProps) => (
 	<form>
 		<div className="flex items-center">
 			<Switch.Root

@@ -1,16 +1,20 @@
 'use client';
 import Image from 'next/image';
-import {Data} from './Data';
 import AutoGrid from './AutoGrid';
 import ExtensionSwitch from './Switch';
  
-export default function ExtensionTools() { 
+interface ExtensionToolsProps {
+  extensions: { id: number; isActive: boolean; image: string; title: string; description: string; }[];
+  onToggle: (index: number) => void;
+}
+
+export default function ExtensionTools({ extensions, onToggle }: ExtensionToolsProps) { 
   return(
     <div >
       <AutoGrid  >
-        {Data.map((item, index) => (
+        {extensions.map((item, index) => (
           <div
-           key={index}
+           key={item.id}
            className="bg-white p-6 rounded-lg shadow-md">
            <div className="flex gap-6">
             <Image
@@ -29,9 +33,8 @@ export default function ExtensionTools() {
             <button className=" p-2 bg-transparent text-black rounded-full border border-gray-300 ">
               remove 
             </button>
-            <ExtensionSwitch 
-            checked={extension.isActive}
-            onCheckedChange={() => onToggle(extension.id)}/>
+            <ExtensionSwitch checked={extensions[index].isActive}
+              onCheckedChange={() => onToggle(item.id)}/>
             </div>
           </div>
         ))}

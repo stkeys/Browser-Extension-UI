@@ -5,8 +5,36 @@ import { ThemeProvider } from "./context/ThemeContext";
 import Logo from "../../public/images/logo.svg"
 import Buttons from "../../components/Button";
 import ExtensionTools from "../../components/ExtensionTools";
+import {Data} from "../../components/Data";
+import { useState } from "react";
 
 export default function Home() {
+  const initialExtensions = Data.map((item, index) => ({
+    ...item,
+    id: index + 1,
+    isActive: true, 
+  }));
+
+  const [extensions, setExtensions] = useState(initialExtensions);
+  const [filter, setFilter] = useState('all');
+
+  const toggleExtension = (id: number) => {
+    setExtensions(extensions.map(ext =>
+      ext.id === id ? { ...ext, isActive: !ext.isActive } : ext
+    ));
+  };
+
+  const filteredExtensions = extensions.filter(ext => {
+    switch (filter) {
+      case 'active':
+        return ext.isActive;
+      case 'inactive':
+        return !ext.isActive;
+      case 'all':
+      default:
+        return true;
+    }
+  });
   return (
     <>
       <ThemeProvider>
@@ -20,17 +48,17 @@ export default function Home() {
                 height={150}
               />
             </div>
-            <button className=" dark:bg-gradient-to-b dark:bg-[hsl(226,11%,37%)] bg-[hsl(0,0%,93%)] p-2 rounded-xl transition-colors mt-2 flex items-center">
+            <div className=" dark:bg-gradient-to-b dark:bg-[hsl(226,11%,37%)] bg-[hsl(0,0%,93%)] p-2 rounded-xl transition-colors mt-2 flex items-center">
               <DarkModeToggle />
-            </button>
+            </div>
 
           </div>
 
           <div className="flex justify-between ">
             <p className="text-[2rem] mb-4 font-bold text-[hsl(227,75%,14%)] dark:text-white">Extensions List</p>
-            <Buttons />
+            <Buttons onFilterChange={setFilter} activeFilter={filter} />
           </div>
-            <ExtensionTools />
+            <ExtensionTools extensions={filteredExtensions} onToggle={toggleExtension}/>
         </div>
       </ThemeProvider>
     </>
