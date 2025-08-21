@@ -32,7 +32,6 @@ export default function Buttons({ onFilterChange, activeFilter }: ButtonsProps) 
       ))}
     </div>
   );
-          // ? '' 
-          // : ''}
+
          
 }
