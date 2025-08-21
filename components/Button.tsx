@@ -13,9 +13,9 @@ export default function Buttons({ onFilterChange, activeFilter }: ButtonsProps) 
     { label: 'Inactive', value: 'inactive'},
     ]
   const getButtonClasses = (buttonFilter: string) => {
-    const baseClasses = "py-2 px-6 rounded-full font-semibold transition-colors duration-200";
-    const activeClasses = "bg-blue-500 text-white shadow-md";
-    const inactiveClasses = "bg-gray-200 text-gray-700 hover:bg-gray-300";
+    const baseClasses = "py-2 px-6 rounded-full  transition-colors duration-200";
+    const activeClasses = "bg-[hsl(3,77%,44%)] text-white dark:bg-[hsl(3,71%,56%)] dark:text-black";
+    const inactiveClasses = "bg-[hsl(200,60%,99%)] dark:bg-[hsl(226,11%,37%)] ";
     return `${baseClasses} ${activeFilter === buttonFilter ? activeClasses : inactiveClasses}`;
   };
 
@@ -32,7 +32,7 @@ export default function Buttons({ onFilterChange, activeFilter }: ButtonsProps) 
       ))}
     </div>
   );
-          // ? 'bg-[hsl(3,77%,44%)] text-white dark:bg-[hsl(3,71%,56%)] dark:text-black' 
-          // : 'bg-[hsl(200,60%,99%)] dark:bg-[hsl(226,11%,37%)] '}
+          // ? '' 
+          // : ''}
          
 }
