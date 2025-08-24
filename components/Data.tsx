@@ -47,6 +47,11 @@ export const Data = [
     description: "Overlay customizable grid layouts on web pages",
   },
 
+  {
+    image: "/images/logo-palette-picker.svg",
+    title: "Palette Picker",
+    description: "Instantly extracts color palettes from any webpage",
+  },
 
 ]
   
