@@ -15,7 +15,7 @@ export default function ExtensionTools({ extensions, onToggle }: ExtensionToolsP
         {extensions.map((item, index) => (
           <div
            key={item.id}
-           className="bg-white p-6 rounded-lg shadow-md">
+           className="bg-white p-6 rounded-lg shadow-md dark:bg-[hsl(226,25%,17%)]">
            <div className="flex gap-6">
             <Image
               src={item.image}
@@ -26,11 +26,11 @@ export default function ExtensionTools({ extensions, onToggle }: ExtensionToolsP
             />
             <div>
             <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-            <p className="text-gray-600">{item.description}</p>
+            <p className="text-gray-600 dark:text-[hsla(0,0%,78%,1.00)]">{item.description}</p>
             </div>
             </div>
             <div className='flex justify-between mt-6 items-center'>
-            <button className=" p-2 bg-transparent text-black rounded-full border border-gray-300 ">
+            <button className=" p-2 bg-transparent text-black rounded-full border border-gray-300 dark:text-white">
               remove 
             </button>
             <ExtensionSwitch checked={extensions[index].isActive}
