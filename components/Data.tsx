@@ -65,5 +65,11 @@ export const Data = [
     description: "Instantly extracts color palettes from any webpage",
   },
 
+  {
+    image: "/images/logo-console-plus.svg",
+    title: "ConsolePlus",
+    description: "Instantly extracts color palettes from any webpage",
+  },
+
 ]
   
