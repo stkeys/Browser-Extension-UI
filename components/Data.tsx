@@ -59,5 +59,11 @@ export const Data = [
     description: "Instantly extracts color palettes from any webpage",
   },
 
+  {
+    image: "/images/logo-dom-snapshot.svg",
+    title: "DOM Snapshot",
+    description: "Instantly extracts color palettes from any webpage",
+  },
+
 ]
   
