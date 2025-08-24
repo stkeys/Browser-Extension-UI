@@ -53,5 +53,11 @@ export const Data = [
     description: "Instantly extracts color palettes from any webpage",
   },
 
+  {
+    image: "/images/logo-link-checker.svg",
+    title: "LinkChecker",
+    description: "Instantly extracts color palettes from any webpage",
+  },
+
 ]
   
