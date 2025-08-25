@@ -6,11 +6,13 @@ import ExtensionSwitch from './Switch';
 interface ExtensionToolsProps {
   extensions: { id: number; isActive: boolean; image: string; title: string; description: string; }[];
   onToggle: (index: number) => void;
+  onRemove: (index: number) => void;
 }
 
-export default function ExtensionTools({ extensions, onToggle }: ExtensionToolsProps) { 
+export default function ExtensionTools({ extensions, onToggle, onRemove }: ExtensionToolsProps) { 
   return(
     <div >
+      {/* <p>Removed!</p> */}
       <AutoGrid  >
         {extensions.map((item, index) => (
           <div
@@ -30,7 +32,9 @@ export default function ExtensionTools({ extensions, onToggle }: ExtensionToolsP
             </div>
             </div>
             <div className='flex justify-between mt-6 items-center'>
-            <button className=" p-2 bg-transparent text-black rounded-full border border-gray-300 dark:text-white">
+            <button
+             className="p-2 bg-transparent text-black rounded-full border border-gray-300 dark:text-white"
+             onClick={ () => onRemove(item.id)}>
               remove 
             </button>
             <ExtensionSwitch checked={extensions[index].isActive}

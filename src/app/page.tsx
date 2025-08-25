@@ -15,6 +15,7 @@ export default function Home() {
     isActive: true, 
   }));
 
+  
   const [extensions, setExtensions] = useState(initialExtensions);
   const [filter, setFilter] = useState('all');
 
@@ -23,6 +24,11 @@ export default function Home() {
       ext.id === id ? { ...ext, isActive: !ext.isActive } : ext
     ));
   };
+
+  const handleRemove = (idToRemove: number) => {
+    setExtensions (prevExtension => prevExtension.filter(ext => ext.id !== idToRemove))
+  }
+
 
   const filteredExtensions = extensions.filter(ext => {
     switch (filter) {
@@ -58,7 +64,7 @@ export default function Home() {
             <p className="text-[2rem] mb-4 font-bold text-[hsl(227,75%,14%)] dark:text-white">Extensions List</p>
             <Buttons onFilterChange={setFilter} activeFilter={filter} />
           </div>
-            <ExtensionTools extensions={filteredExtensions} onToggle={toggleExtension}/>
+            <ExtensionTools extensions={filteredExtensions} onToggle={toggleExtension} onRemove={handleRemove}/>
         </div>
       </ThemeProvider>
     </>
